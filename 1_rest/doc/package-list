@@ -1,0 +1,7 @@
+com
+com.anotherservice.db
+com.anotherservice.io
+com.anotherservice.rest
+com.anotherservice.rest.core
+com.anotherservice.rest.security
+com.anotherservice.util

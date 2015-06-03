@@ -1,0 +1,44 @@
+<config>
+<com>
+	<busit>
+		<rest>
+			<cron>__CRON__</cron>
+		</rest>
+		<broker>
+			<command_java>java -cp lib/broker.jar:lib/crypto.jar:lib/busit.jar:lib/connector.jar:lib/javax.mail.jar:lib/base.jar:lib/rest.jar:lib/rabbitmq-3.2.1.jar broker --remote-client</command_java>
+			<command_php>php /dns/com/busit/broker-php/remoteProcessor.php</command_php>
+			
+			<jars>/dns/com/busit/var/lib/connectors/lib/javax.mail.jar</jars>
+			<min>0</min>
+			<max>50</max>
+			<timeout>10000</timeout>
+			<queue>100</queue>
+			<rest_url>xxx</rest_url>
+			<rest_auth>xxx</rest_auth>
+			<logLevel>ALL</logLevel>
+			
+			<authorityPrincipal>CN=Busit,O=Busit</authorityPrincipal>
+			<authenticPrincipal>CN=Busit Unchecked,OU=Busit Unchecked,O=Busit</authenticPrincipal>
+			<uncheckedPrincipal>CN=Busit Unchecked,OU=Busit Unchecked,O=Busit</uncheckedPrincipal>
+			
+			<class>com.busit.routing.BrokerServerRabbit</class>
+			<rabbit>
+				<host>xxx</host>
+				<vhost>/xxx</vhost>
+				<username>xxx</username>
+				<password>xxx</password>
+				<port>5672</port>
+				<exchange>xxx.cloud</exchange>
+				<exchangeError>xxx.errors</exchangeError>
+				<binding_java>0.1.*</binding_java>
+				<binding_php>0.2.*</binding_php>
+				<queue_java>java.cloud</queue_java>
+				<queue_php>php.cloud</queue_php>
+			</rabbit>
+			<tcp>
+				<port>6666</port>
+			</tcp>
+		</broker>
+	</busit>
+</com>
+</config>

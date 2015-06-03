@@ -1,0 +1,29 @@
+<config>
+	<com>
+		<anotherservice>
+			<rest>
+				<model>
+					<initializer>com.anotherservice.rest.model.Initializer</initializer>
+					
+					<path>system</path>
+					
+					<db_host>sql</db_host>
+					<db_port>3306</db_port>
+					<db_name>xxx</db_name>
+					<db_user>xxx</db_user>
+					<db_pass>xxx</db_pass>
+					<db_max>10</db_max>
+					<db_min>3</db_min>
+					<db_shared>yes</db_shared>
+					<db_env_override>VCAP_SERVICES</db_env_override>
+					
+					<use_security>yes</use_security>
+					<superadminGrantName>SUPERADMIN</superadminGrantName>
+					<authParameter>auth,credentials</authParameter>
+					<hashRounds>3</hashRounds>
+					<hashComplexify>yes</hashComplexify>
+				</model>
+			</rest>
+		</anotherservice>
+	</com>
+</config>

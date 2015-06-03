@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>rest</display-name>
+	
+	<servlet>
+		<servlet-name>rest</servlet-name>
+		<servlet-class>com.anotherservice.rest.core.Servlet</servlet-class>
+	<init-param>
+            <param-name>logLevel</param-name>
+            <param-value>ALL</param-value>
+	</init-param>
+	<init-param>
+            <param-name>logStdout</param-name>
+            <param-value>true</param-value>
+	</init-param>
+	<init-param>
+            <param-name>formatParameter</param-name>
+            <param-value>f,format,output,out</param-value>
+	</init-param>
+	<init-param>
+            <param-name>servicesDirectory</param-name>
+            <param-value>/WEB-INF/services/</param-value>
+	</init-param>
+	<init-param>
+            <param-name>serviceConfigFileName</param-name>
+            <param-value>config.xml</param-value>
+	</init-param>
+	<init-param>
+            <param-name>serviceInitializerSection</param-name>
+            <param-value>initializer</param-value>
+	</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>rest</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+</web-app>

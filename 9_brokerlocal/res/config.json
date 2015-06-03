@@ -1,0 +1,22 @@
+{
+	"jar": "..\\java-connectors\\lib\\forward.jar",
+	"class": "forward",
+	"config": 
+	{
+		"a": "1",
+		"b": "2"
+	},
+	"inputs":
+	{
+		"in": { "key": "in", "value": "value in" }
+	},
+	"outputs":
+	{
+		"out": { "key": "out", "value": "value out" }
+	}
+	"cron": null,
+	"push": "in",
+	"pull": "out",
+	"message": "coucou les loulous",
+	"files": null
+}
